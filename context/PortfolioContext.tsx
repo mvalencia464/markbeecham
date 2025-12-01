@@ -61,18 +61,19 @@ export const PortfolioProvider: React.FC<{ children: ReactNode }> = ({ children 
 
   const deletePhoto = async (id: string) => {
     try {
-      // Find photo to check for storage path
-      const photoToDelete = photos.find(p => p.id === id);
+      // Check if it's a static photo
+      const isStaticPhoto = INITIAL_PHOTOS.some(p => p.id === id);
 
-      // If it's one of the initial static photos (numeric IDs), just filter it out locally
-      // (Though in reality we probably shouldn't allow deleting static assets via this UI)
-      if (!photoToDelete?.storage_path) {
+      if (isStaticPhoto) {
         setPhotos(prev => prev.filter(p => p.id !== id));
         return;
       }
 
+      // Find photo to get storage path
+      const photoToDelete = photos.find(p => p.id === id);
+
       // Delete from storage if it has a path
-      if (photoToDelete.storage_path) {
+      if (photoToDelete?.storage_path) {
         const { error: storageError } = await supabase.storage
           .from('portfolio-images')
           .remove([photoToDelete.storage_path]);
