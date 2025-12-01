@@ -69,6 +69,7 @@ export const PACKAGES: ServicePackage[] = [
   {
     title: "The Game Day Package",
     price: 250,
+    priceDescription: "/ game",
     description: "Enjoy the game while we focus on capturing your child's key moments.",
     features: [
       "Professional-grade equipment",
@@ -81,21 +82,47 @@ export const PACKAGES: ServicePackage[] = [
     highlight: true
   },
   {
-    title: "Wildlife Prints",
-    description: "Stunning prints of Tennessee's magnificent wildlife. Perfect for home or office decoration.",
-    cta: "View Gallery",
+    title: "Family Portrait Session",
+    price: 350,
+    priceDescription: "/ session",
+    description: "Beautiful outdoor sessions that capture the genuine connection between family members.",
+    features: [
+      "1 hour on-location session",
+      "Up to 6 family members",
+      "20 professionally edited high-res images",
+      "Private online gallery",
+      "Print release included"
+    ],
+    cta: "Book Family Session",
     highlight: false
   },
   {
-    title: "Family Portraits",
-    description: "Beautiful sessions that capture the love and connection between family members.",
-    cta: "Inquire for Pricing",
+    title: "Wildlife Fine Art Prints",
+    priceDescription: "From $45",
+    description: "Bring the majesty of Tennessee's wildlife into your home or office with museum-quality prints.",
+    features: [
+      "Premium archival paper",
+      "Sizes from 8x10 to 40x60",
+      "Optional custom framing",
+      "Signed by Mark Beecham",
+      "Certificate of Authenticity"
+    ],
+    cta: "View Print Shop",
     highlight: false
   },
   {
-    title: "Real Estate",
-    description: "Professional photography to make your listings shine and attract potential buyers.",
-    cta: "Contact Us",
+    title: "Real Estate Photography",
+    price: 200,
+    priceDescription: "/ listing",
+    description: "Professional photography to make your listings shine and attract potential buyers instantly.",
+    features: [
+      "Interior & Exterior coverage",
+      "HDR processing for perfect lighting",
+      "24-hour turnaround time",
+      "Blue sky replacement",
+      "MLS-ready & High-Res files"
+    ],
+    cta: "Book Listing",
     highlight: false
   }
 ];

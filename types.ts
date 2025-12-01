@@ -11,6 +11,7 @@ export interface Photo {
 export interface ServicePackage {
   title: string;
   price?: number;
+  priceDescription?: string;
   description: string;
   features?: string[];
   cta: string;
