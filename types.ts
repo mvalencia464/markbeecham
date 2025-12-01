@@ -5,6 +5,7 @@ export interface Photo {
   category: 'Wildlife' | 'Sports' | 'Real Estate' | 'Family' | 'Uploads';
   width?: number;
   height?: number;
+  storage_path?: string;
 }
 
 export interface ServicePackage {
